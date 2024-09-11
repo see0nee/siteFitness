@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Sonic;
+    box-sizing: border-box;
+}
+
+a:hover {
+    color:#ff8800;
+}
+
+.nav>a:hover {
+    color: #ff8800;
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    background: -webkit-linear-gradient(90deg,#ff8800,#ffde26,#e58e42,#ff8800); 
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background:#000000;
+    height: 10vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+    height: 10vh;
+}
+
+.nav>a {
+    padding-right: 10px;
+    display: block;
+    background-color: #000000;
+    color: white;
+    font-size: 1.5em;
+}
+
+header>img {
+    padding: 10px;
+}
+
+.index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+}
+
+.contacts {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+}
+
+.contacts h1 {
+    padding-bottom: 1em
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.other-contacts {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background:#000000;
+    padding: 10px;
+    padding-inline: 32px;
+}
+
+footer>div {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+footer>div>a {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    
+}
+
+footer>div>img {
+    width: 30px;
+}
+
+footer div:hover img {
+    transform: rotate(20deg);
+}
+
+img[alt="burger"] {
+    display: none; 
+}
+
+iframe {
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+@media screen and (max-width: 1024px) {
+    img[alt="burger"] {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    header:hover .nav {
+        background-color: #000000;
+        display: block;
+        position: absolute;
+        padding: 0px;
+        margin-top: 10vh;
+    }
+    
+    header:hover ~ .gallery {
+        padding-top: 10em;
+    }
+    footer {
+        flex-wrap: wrap;
+        padding-inline: 32px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .index {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .other-contacts {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+    
+    .calendar-item {
+        flex-direction: column;
+    }
+    
+    * {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    * {
+        font-size: 1.5rem;
+    }
+    .input-wrapper input {
+        width: 600px;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    margin: 20px;
+}
+
+select {
+    width: 200px;
+    padding: 1em;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+}
+
+option {
+    background-color: transparent;
+
+}
+
+.input-wrapper input, #calendar-cont input {
+    width: 150px;
+    padding: 1em;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+}
+  
+.input-wrapper input:focus,  #calendar-cont input:focus{
+    border-color: rgb(255, 128, 0);
+}
+  
+.input-wrapper label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    padding: 10px;
+    transition: 0.2s;
+}
+ 
+.input-wrapper input:focus + label, .input-wrapper input:valid + label {
+    transform: translateY(-20px);
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: transparent;
+    padding: 3px;
+    border: solid 0.5px black;
+    border-radius: 90px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    border: solid 0.5px rgb(255, 128, 0);
+    color: rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: Sonic;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Sonic.ttf");
+}
+
+.pricePage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.priceForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.price1, .price2, .price3, .price4 {
+    width: 20vw;
+    height: 60vh;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.price1 {
+    background-image: url('/static/images/price1.jpg');
+    width: 3vw;
+}
+
+.price2 {
+    background-image: url('/static/images/price2.jpg');
+    width: 3vw;
+}
+
+.price3 {
+    background-image: url('/static/images/price3.jpg');
+    width: 3vw;
+}
+
+.price4 {
+    background-image: url('/static/images/price4.jpg');
+    width: 3vw;
+}
+
+.carousel:has(~div #congret1:checked) #price1{ 
+    transition: 0.5s;
+    width: 300px; 
+} 
+.carousel:has(~div #congret2:checked) #price2{ 
+    transition: 0.5s;
+    width: 300px; 
+} 
+.carousel:has(~div #congret3:checked) #price3{ 
+    transition: 0.5s;
+    width: 300px; 
+} 
+.carousel:has(~div #congret4:checked) #price4{ 
+    transition: 0.5s all;
+    width: 300px; 
+}
+
+input[type="radio"] {
+    appearance: none;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+}
+
+input[type="radio"]:checked {
+    background-color: black;
+}
+
+.news-cont, .calendar-cont {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.news-item, .calendar-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    padding: 1em;
+    border: solid 0.2em rgb(254, 195, 18);
+    border-end-start-radius: 1em;
+    border-start-end-radius: 1em;
+}
+
+.news-item input {
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.news-item input:hover {
+    color: orangered;
+}
+
+.news-item input:active {
+    display: none;
+}
+
+@keyframes anim {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        filter: blur(1px);
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#scroll {
+    position: fixed; 
+    bottom: 25px;
+    right: 10px; 
+    cursor:pointer; 
+    border: 1px solid rgb(0, 0, 0);
+    background:  rgb(40, 40, 40);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#scroll:hover {
+    animation: anim 0.5s linear; 
+}
+
+.gallery {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.photo {
+    width: 300px;
+    height: 200px;
+    padding: 1em;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.photo img {
+    width: 300px;
+    position: absolute;
+}
+
+.photo p {
+    
+    background: white;
+    mix-blend-mode: overlay;
+    
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1em;
+}
+
+
+.calendar-item .sign {
+    
+    display: none;
+}
+
+.calendar-item:hover .sign {
+    display: flex;
+    flex-direction: column;
+}
+
+#svg {
+    display: none;
+}
+
+#svg svg {
+    width: 8em;
+    height: 8em;
+}
